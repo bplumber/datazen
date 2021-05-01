@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/ques.css' %}">
+
+<title>Backend</title>
+<body>
+<h2 class="headd">DataZen Tech team Round 2</h2>
+<h3 class="domain">Backend Quiz</h3>
+<p>Since your First preference is Backend. Attempt the quiz below so that we get to know you better.</p>
+    <form action="{% url 'backend' %}" method="post">
+        {% csrf_token %}
+        {% for back in backs %}
+        <div class="padd">
+        <fieldset id="{{back.id}}" class="ques">
+            <legend> {{back.question}}</legend>
+            <p><label> <input type="radio" name="{{back.id}}" required value="{{back.optiona}}"> {{back.optiona}} </label></p>
+            <p><label> <input type="radio" name="{{back.id}}" required value="{{back.optionb}}"> {{back.optionb}} </label></p>
+            <p><label> <input type="radio" name="{{back.id}}" required value="{{back.optionc}}"> {{back.optionc}}</label></p>
+            <p><label> <input type="radio" name="{{back.id}}" required value="{{back.optiond}}"> {{back.optiond}} </label></p>
+        </fieldset>
+        </div>
+        {% endfor %}
+        <p class="butp"><input type="submit"  value="Submit" name="Confirm" class="button"></p>
+    </form
+</body>
+</html>

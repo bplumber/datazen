@@ -1,0 +1,71 @@
+.content{
+    text-align: center;
+}
+.domain{
+    text-align: center;  
+    font-style: italic;
+    text-decoration: underline; 
+    font-size: 30px;
+   }
+
+   .btn-group button {
+    background-color: #8b4513; /* Green background */
+    border: 3px solid #6b330c; /* Green border */
+    color: white; /* White text */
+    padding: 10px 24px; /* Some padding */
+    cursor: pointer; /* Pointer/hand icon */
+    float: left; /* Float the buttons side by side */
+    text-align: center;
+  }
+  
+  /* Clear floats (clearfix hack) */
+  .btn-group:after {
+    content: "";
+    clear: both;
+    display: table;
+  }
+  
+  .btn-group button:not(:last-child) {
+    border-right: none; /* Prevent double borders */
+  }
+  
+  /* Add a background color on hover */
+  .btn-group button:hover {
+    background-color: #6b330c;
+  }
+  .container { 
+    height: 25px;
+    position: relative;
+ 
+  }
+  
+  .center {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  }
+  .containers {
+    font-size: 26px; 
+    height: 100px;
+    position: relative;
+    border: 10px solid white;
+    border-radius: 50%;
+    margin-left: auto;
+    margin-right: auto;
+    width: 150px;    
+    background-color: black;
+    color: white;
+    font-family: Comic Sans MS;
+}
+  
+  .centers {
+    margin: 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -ms-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+  } 

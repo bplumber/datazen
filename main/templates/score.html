@@ -1,0 +1,27 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>HTML Tutorial</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/score.css' %}">
+    </head>
+    <body >
+        <h2 class="headd">DataZen Tech team Round 2</h2>
+        <div class="content">
+            <h3 class="domain">Result</h3>
+            <div class="containers"><div class="centers"><h4>{{score}} / {{finalscore}}</h4></div></div>
+            <h4>You have {{grade}} skills in this topic.</h4>
+            <p>Click below to Attempt again</p>
+            <div class="container">
+            <div class="center">
+            <div class="btn-group">
+            <a href="/frontendquiz"><button class="button"><strong>Frontend</strong></button></a>
+            <a href="/backendquiz"><button class="button"><strong>Backend</strong></button></a>
+            <a href="/datasciencequiz"><button class="button"><strong>Data Science</strong></button></a>
+            </div> 
+            </div>
+            </div>
+        </div>
+    </body>
+</html>

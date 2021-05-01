@@ -1,0 +1,28 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<link rel="stylesheet" href="{% static 'css/style.css' %}">
+<link rel="stylesheet" href="{% static 'css/ques.css' %}">
+
+<title>Data Science</title>
+<body>
+<h2 class="headd">DataZen Tech team Round 2</h2>
+<h3 class="domain">Data Science Quiz</h3 >
+<p>Since your First preference is Data Science Quiz. Attempt the quiz below so that we get to know you better.</p>
+    <form action="{% url 'datascience' %}" method="post">
+        {% csrf_token %}
+        {% for data in datas %}
+        <div class="padd">
+        <fieldset id="{{data.id}}" class="ques">
+            <legend> {{data.question}}</legend>
+            <p><label> <input type="radio" name="{{data.id}}" required value="{{data.optiona}}"> {{data.optiona}} </label></p>
+            <p><label> <input type="radio" name="{{data.id}}" required value="{{data.optionb}}"> {{data.optionb}} </label></p>
+            <p><label> <input type="radio" name="{{data.id}}" required value="{{data.optionc}}"> {{data.optionc}}</label></p>
+            <p><label> <input type="radio" name="{{data.id}}" required value="{{data.optiond}}"> {{data.optiond}} </label></p>
+        </fieldset>
+        </div>
+        {% endfor %}
+        <p class="butp"><input type="submit"  value="Submit" name="Confirm" class="button"></p>
+    </form
+</body>
+</html>

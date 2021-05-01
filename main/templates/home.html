@@ -1,0 +1,66 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+        <link rel="stylesheet" href="{% static 'css/home.css' %}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+        <h3 class="headd">DataZen Tech team Round 2</h3>
+        <form action="{% url 'register' %}" method="post">
+            {% csrf_token %}
+
+            <p>
+                <label>Name: 
+                    <input type="text" name="name" id="name" required>
+                </label> 
+            </p>
+
+            <p>
+                <label>Phone: 
+                    <input type="tel" name="phone" id="phone">
+                </label>
+            </p>
+
+            <p>
+                <label>Email: 
+                    <input type="email" name="email" id="email">
+                </label>
+            </p>
+
+            <p>
+                <label>Github Link:  
+                    <input type="link" name="github" id="github">
+                </label>
+            </p>
+            <div class="pref">
+            <fieldset id="first">
+                <legend>First Preference?</legend>
+                <p><label> <input type="radio" name="first" required value="Frontend"> Frontend </label></p>
+                <p><label> <input type="radio" name="first" required value="Backend"> Backend </label></p>
+                <p><label> <input type="radio" name="first" required value="Data Science"> Data Science </label></p>
+            </fieldset>
+            </div>
+            <div class="pref">
+            <fieldset id="second">
+                <legend>Second Preference?</legend>
+                <p><label> <input type="radio" name="second" required value="Frontend"> Frontend </label></p>
+                <p><label> <input type="radio" name="second" required value="Backend"> Backend </label></p>
+                <p><label> <input type="radio" name="second" required value="Data Science"> Data Science </label></p>
+            </fieldset>
+            </div>
+            <div class="pref">
+            <fieldset id="third">
+                <legend>Third Preference?</legend>
+                <p><label> <input type="radio" name="third" required value="Frontend"> Frontend </label></p>
+                <p><label> <input type="radio" name="third" required value="Backend"> Backend </label></p>
+                <p><label> <input type="radio" name="third" required value="Data Science"> Data Science </label></p>
+            </fieldset>
+            </div>
+            <p class="butp"><input type="submit"  value="Submit" name="Confirm" class="button"></p>
+
+        </form>
+
+    </body>
+</html>
